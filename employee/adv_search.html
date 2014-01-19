@@ -1,0 +1,34 @@
+<html>
+  <head>
+  <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+	<link rel="stylesheet" href="../jquery.mobile/jquery.mobile-1.4.0.min.css" />
+	<script src="../jquery.mobile/jquery-1.7.2.min"></script>
+	<script src="../jquery.mobile/jquery.mobile-1.4.0.min.js"></script>
+	<script src="../js/adv_search.js"></script>
+	<script src="../js/logout.js"></script>
+  </head>
+  
+  <body>
+	<div data-role="page" id="homepage" data-theme="a">
+		<div data-role="header" data-theme="a" data-position="fixed">
+		<a href="redirect.html" data-icon="home" data-iconpos="notext" data-rel="dialog" rel="external" data-transition="none">Home</a>
+			<h1>Advanced Search</h1>
+		<a href="../index.html" id="logout" data-icon="delete" data-iconpos="notext" data-rel="dialog" rel="external" data-transition="none">Logout</a>
+	</div>
+		
+		<div data-role="content">
+		
+		Admission Year <select id="admsndate"><option>Select admission year</option><option>2011</option><option>2012</option><option>2013</option></select><br>
+		Course <select id="course"><option>Select a course</option><option>10th A</option><option>BE 1st sem</option></select><br>
+		Birth Year <select id="dob"><option>Select birth year</option><option>1991</option><option>1992</option><option>1993</option></select><br>
+		Gender  <select id="gender"><option>All</option><option>Male</option><option>Female</option></select><br>
+		Blood Group<select id="bgrp"><option>Select blood group</option><option>Unknown</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>O+</option><option>O-</option><option>AB+</option><option>AB-</option></select><br>				
+		Nationality<input type="text" id="nat"><br>
+		Category<select id="catgry"><option>Select category</option><option>Open</option><option>OBC</option><option>SC</option></select>
+		
+		<center><a href="" data-role="button" data-rel="dialog" id="search" data-theme="a" data-icon="search" data-inline="true" />Search</a></center>
+		<ul id="searchData" data-role="listview"></ul>
+		</div>
+	</div>
+  </body>
+</html>

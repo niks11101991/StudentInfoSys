@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+	<link rel="stylesheet" href="../jquery.mobile/jquery.mobile-1.4.0.min.css" />
+	<script src="../jquery.mobile/jquery-1.7.2.min"></script>
+	<script src="../jquery.mobile/jquery.mobile-1.4.0.min.js"></script>
+	<script src="../js/add_details.js"></script>
+	<script src="../js/logout.js"></script>
+  </head>
+  
+  <body>
+	<div data-role="page" id="homepage" data-theme="a">
+	<div data-role="header" data-theme="a" data-position="fixed">
+		<a href="redirect.html" data-icon="home" data-iconpos="notext" data-rel="dialog" rel="external" data-transition="none">Home</a>
+			<h1>Add Details</h1>
+		<a href="../index.html" id="logout" data-icon="delete" data-iconpos="notext" data-rel="dialog" rel="external" data-transition="none">Logout</a>
+	</div>	
+	<div data-role="content">
+		<form>
+		Admission Id. <input type="text" id="admsnno"><br>
+		Temporary Password <input type="text" id="pass"><br>
+		Admission Date <input type="text" id="admsndate"><br>
+		First Name <input type="text" id="fname"><br>
+		Middle Name <input type="text" id="mname"><br>
+		Last Name <input type="text" id="lname"><br>
+		Course <select id="course"><option>10th A</option><option>BE 1st sem</option></select><br>
+		Date of Birth <input type="text" id="dob"><br>
+		Gender  <select id="gender"><option>Male</option><option>Female</option></select><br>
+		Blood Group<select id="bgrp"><option>Unknown</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>O+</option><option>O-</option><option>AB+</option><option>AB-</option></select><br>				
+		Birth Place<input type="text" id="bplace"><br>
+		Nationality<input type="text" id="nat"><br>
+		Category<select id="catgry"><option>Open</option><option>OBC</option><option>SC</option></select>
+		Religion<input type="text" id="relgn"><br>
+		<br>
+		<br>
+		Contact Details
+		<br>
+		Address<textarea id="addr"></textarea>
+		City<input type="text" id="city">
+		State<input type="text" id="state">
+		PIN Code<input type="text" id="pin">
+		Country<input type="text" id="country">
+		Mobile No. <input type="tel" id="mob">
+		Email<input type="email" id="email">
+		<input type="button" Value="Add Student" id="submit" data-theme="a">
+		</form>
+		</div>
+	</div>
+  </body>
+</html>

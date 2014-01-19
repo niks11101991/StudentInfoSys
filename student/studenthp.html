@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+	<link rel="stylesheet" href="../jquery.mobile/jquery.mobile-1.4.0.min.css" />
+	<link rel="stylesheet" href="../css/style.css" />
+	<script src="../jquery.mobile/jquery-1.7.2.min"></script>
+	<script src="../jquery.mobile/jquery.mobile-1.4.0.min.js"></script>
+	<script src="../js/employee_details.js"></script>
+	<script src="../js/freewall.js"></script>
+	<script src="../js/logout.js"></script>
+	<style type="text/css">
+			html,body {
+				margin: 0px;
+				width: 100%;
+				height: 100%;
+				padding: 0px;
+			}
+			.layout {
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				bottom: 0px;
+				margin: 4em 2%;
+			}
+			.head {
+				margin: 1em 4em;
+			}
+			.free-wall {
+				height: 100%;
+				margin: auto;
+				overflow: hidden;
+			}
+	</style>	
+  </head>
+  
+  <body>
+	<div data-role="page" id="homepage" data-theme="a">
+		<div data-role="header" data-theme="a" data-position="fixed">
+			<a href="" data-icon="home" data-iconpos="notext" data-rel="dialog" rel="external" data-transition="none">Home</a>
+				<h1>HomePage</h1>
+			<a href="../index.html" id="logout" data-icon="delete" data-iconpos="notext" data-rel="dialog" rel="external" data-transition="none">Logout</a>
+		</div>
+	
+	<div data-role="content">
+		<a href="#leftpanel3" id="chng" data-role="button" data-inline="true" data-mini="true" data-icon="arrow-r" data-iconpos="right" >&nbsp;&nbsp;My Profile</a>
+	<div id="freewall" class="free-wall">
+	</div>
+<script type="text/javascript">
+
+			var html="<a href = 'search_students.html' data-rel='dialog' rel='external' style='text-decoration=none'><div class='cell' style='width:200px; height: 200px; background-image: url(../images/employee/2.png)'><br><center><span style='left:24%;position:absolute;bottom:15px;'><b>Student Details</b></span></center></div></a>";
+			html+="<a href = 'all_news.html' data-rel='dialog' rel='external' style='text-decoration=none'><div class='cell' style='width:200px; height: 200px; background-image: url(../images/employee/3.png)'><br><center><span style='left:24%;position:absolute;bottom:15px;'><b>View News</b></span></center></div></a>";
+			html+="<div class='cell' style='width:200px; height: 200px; background-image: url(../images/employee/5.png)'><br><center><span style='position:relative;top:125px;'><b>Messages</b></span></center></div>";
+			html+="<a href = 'view_my_attendance.html' data-rel='dialog' rel='external' style='text-decoration=none'><div class='cell' style='width:200px; height: 200px; background-image: url(../images/employee/6.png)'><br><center><span style='position:relative;top:125px;'><b>Attendance</b></span></center></div></a>";
+			html+="<a href = 'view_examinations.html' data-rel='dialog' rel='external' style='text-decoration=none'><div class='cell' style='width:200px; height: 200px; background-image: url(../images/employee/7.png)'><br><center><span style='position:relative;top:125px;'><b>Exams</b></span></center></div></a>";
+			html+="<div class='cell' style='width:200px; height: 200px; background-image: url(../images/employee/8.png)'><br><center><span style='position:relative;top:125px;'><b>Timetable</b></span></center></div>";
+
+																											
+			$("#freewall").html(html);
+			
+			var wall = new freewall("#freewall");
+			wall.reset({
+				selector: '.cell',
+				animate: true,
+				cellW: 200,
+				cellH: 200,
+				onResize: function() {
+					wall.refresh();
+				}
+			});
+			wall.fitWidth();
+			// for scroll bar appear;
+			$(window).trigger("resize");
+		</script>
+	</div>
+	
+	<div data-role="panel" id="leftpanel3" data-position="left" data-display="push" data-theme="a">
+	 	<br>
+	 	<br>
+	 	<div data-role="content" style="position:relative;left:-20px">
+	 	Name : <span id="name"></span>
+	 	<br>
+	 	Email : <span id="email"></span>
+	 	<br>
+	 	Dept : <span id="dept"></span><br>
+	 	Position : <span id="pos"></span> <br>  
+   		</div>
+   		<center><a href="emp_profile.html" data-role="button" data-inline="true" data-mini="true" data-icon="">View Full Profile</a></center>
+   	</div>
+	</div>
+  </body>
+</html>

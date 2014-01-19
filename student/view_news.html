@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+	<link rel="stylesheet" href="../jquery.mobile/jquery.mobile-1.4.0.min.css" />
+	<script src="../jquery.mobile/jquery-1.7.2.min"></script>
+	<script src="../jquery.mobile/jquery.mobile-1.4.0.min.js"></script>
+ 	<script src="../js/view_news.js"></script>
+ 	<script src="../js/logout.js"></script>
+  </head>
+  
+  <body>
+  <div data-role="header" data-theme="a" data-position="fixed">
+		<a href="studenthp.html" data-icon="home" data-iconpos="notext" data-rel="dialog" rel="external" data-transition="none">Home</a>
+			<h1><span id="title"></span></h1>
+		<a href="../index.html" id="logout" data-icon="delete" data-iconpos="notext" data-rel="dialog" rel="external" data-transition="none">Logout</a>
+  </div>
+  
+  <div data-role="content">
+  <h2>Posted by <span id="author"></span></h2>
+  <h3><span id="time"></span></h3>
+  <p><span id="content1"></span></p>
+  </div>
+  
+  <div data-role="footer" data-theme="a" data-position="fixed">
+		<div data-role="navbar">
+	        <ul>
+			     <li><a data-transition="none" href="all_news.html" data-rel="dialog" rel="external" data-icon="back" data-theme="a">Back</a></li>
+	         </ul>
+    		
+		</div>
+	</div><!-- /footer -->
+  </body>
+</html>	

@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+	<link rel="stylesheet" href="../jquery.mobile/jquery.mobile-1.4.0.min.css" />
+	<script src="../jquery.mobile/jquery-1.7.2.min"></script>
+	<script src="../jquery.mobile/jquery.mobile-1.4.0.min.js"></script>
+	<script src="../js/view_attendance_reports.js"></script>
+	<script src="../js/logout.js"></script>
+  </head>
+  
+  <body>
+	<div data-role="page" id="homepage" data-theme="a">
+		<div data-role="header" data-theme="a" data-position="fixed">
+			<a href="teacherhp.html" data-icon="home" data-iconpos="notext" data-rel="dialog" rel="external" data-transition="none">Home</a>
+				<h1>Attendance Report</h1>
+			<a href="../index.html" id="logout" data-icon="delete" data-iconpos="notext" data-rel="dialog" rel="external" data-transition="none">Logout</a>
+		</div>	
+		<div data-role="content">
+		<h3>Total Lectures : <span id="lecno"></span></h3>
+		 <div class=ui-grid-b id="attendance">
+      	<div class=ui-block-a style="height:25px;"><center><h3>Name</h3></center></div>
+      	<div class=ui-block-b style="height:25px"><center><h3>Total</h3></center></div>
+       	<div class=ui-block-c style="height:25px"><center><h3>Percentage</h3></center></div>
+       <hr>
+		<br><br>
+		</div>
+	</div>
+	
+  </body>
+</html>

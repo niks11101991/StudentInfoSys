@@ -1,0 +1,89 @@
+<html>
+  <head>
+     <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+	<link rel="stylesheet" href="../jquery.mobile/jquery.mobile-1.4.0.min.css" />
+	<script src="../jquery.mobile/jquery-1.7.2.min"></script>
+	<script src="../jquery.mobile/jquery.mobile-1.4.0.min.js"></script>
+	<script src="../js/logout.js"></script>
+	<script>
+	function getURLParameter(name) {
+		return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+	}	
+	var sid=getURLParameter('sid');
+
+	$(document).ready(function()
+ {
+		var fname="";
+        $.getJSON("http://gmatrix.webege.com/view_details.php",{sid:sid},function(data)
+                {
+				$("#admsnno").text(sid);
+				$("#fname").text(data[0]["fname"]);	
+ 	            $("#admsndate").text(data[0]["admsndate"]);
+				$("#mname").text(data[0]["mname"]);
+				$("#lname").text(data[0]["lname"]);
+				$("#course").text(data[0]["course"]);
+				$("#dob").text(data[0]["dob"]);
+				$("#gender").text(data[0]["gender"]);
+				$("#bgrp").text(data[0]["bgrp"]);
+				$("#bplace").text(data[0]["bplace"]);
+				$("#nat").text(data[0]["nat"]);
+				$("#catgry").text(data[0]["catgry"]);
+				$("#relgn").text(data[0]["relgn"]);
+				$("#addr").text(data[0]["addr"]);
+				$("#city").text(data[0]["city"]);
+				$("#state").text(data[0]["state"]);
+				$("#pin").text(data[0]["pin"]);
+				$("#country").text(data[0]["country"]);
+				$("#mob").text(data[0]["mob"]);
+				$("#email").text(data[0]["email"]);
+            });
+ });
+
+	</script>
+
+  </head>
+  
+  <body>
+	<div data-role="page" id="homepage" data-theme="a">
+	<div data-role="header" data-theme="a" data-position="fixed">
+		<a href="redirect.html" data-icon="home" data-iconpos="notext" data-rel="dialog" rel="external" data-transition="none">Home</a>
+			<h1>Student Details</h1>
+		<a href="../index.html" id="logout" data-icon="delete" data-iconpos="notext" data-rel="dialog" rel="external" data-transition="none">Logout</a>
+	</div>
+		<div data-role="content">
+		<br>
+		<form>
+		<center>
+		<table cell-spacing=3 width=50%>
+		<tr><td>Admission no.</td><td> <span id="admsnno"></span></td></tr>
+		<tr><td>Admission Date</td><td> <span id="admsndate"></span></td></tr>
+		<tr><td>First Name</td><td> <span id="fname"></span></td></tr>
+		<tr><td>Middle Name</td><td> <span id="mname"></span></td></tr>
+		<tr><td>Last Name</td><td> <span id="lname"></span></td></tr>
+		<tr><td>Course</td><td> <span id="course"></span></td></tr>
+		<tr><td>Date of Birth</td><td> <span id="dob"></span></td></tr>
+		<tr><td>Gender </td><td> <span id="gender"></span></td></tr>
+		<tr><td>Blood Group</td><td> <span id="bgrp"></span></td></tr>			
+		<tr><td>Birth Place</td><td> <span id="bplace"></span></td></tr>
+		<tr><td>Nationality</td><td> <span id="nat"></span></td></tr>
+		<tr><td>Category</td><td> <span id="catgry"></span></td></tr>
+		<tr><td>Religion</td><td> <span id="relgn"></span></td></tr>
+		
+		<tr><td>&nbsp;</td></tr>
+		<tr><td colspan=2><center><b>Contact Details</b></center></td></tr>
+		<tr><td>Address</td><td> <span id="addr"></span></td></tr>
+		<tr><td>City</td><td> <span id="city"></span></td></tr>
+		<tr><td>State</td><td> <span id="state"></span></td></tr>
+		<tr><td>PIN Code</td><td> <span id="pin"></span></td></tr>
+		<tr><td>Country</td><td> <span id="country"></span></td></tr>
+		<tr><td>Mobile No.</td><td> <span id="mob"></span></td></tr>
+		<tr><td>Email</td><td> <span id="email"></span></td></tr>
+		<tr></tr>
+		<tr><td colspan=2><input type="button" Value="Update Details" id="submit" data-theme="a"></td></tr>
+		</table>
+		</center>
+		</form>
+		</div>
+	</div>
+  </body>
+</html>
